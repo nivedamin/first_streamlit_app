@@ -38,10 +38,8 @@ try:
   else:
     back_from_function = get_fruityvice_data(fruit_choice)
     streamlit.dataframe(back_from_function)
-    except URLError as e:
-      streamlit.error()
-
-streamlit.header("The fruit list contains:")
+    
+    streamlit.header("The fruit list contains:")
 #Snowflake-related functions
 def get_fruit_load_list():
   with my_cnx_cur() as my_cur:
